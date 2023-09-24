@@ -17,8 +17,14 @@ Scripts used for rendering figures in PyMol coloured by B-factor
         - For `replaceBfactors('193l.pdb', myArray, 'CA')`, then `myArray` should be of size (1, 129).
         - For `replaceBfactors('193l.pdb', myArray, 'All')`, then `myArray` should be of size (1, 1012).
 
-- Python scripts
-    -
+- Python functions
+    - 
+- All functions are contained in the module `pdb_utils.py`.
+- `replace_Bfactors(myPDB, myArray, selection)` is the python equivalent of the function above.
+    - Examples:
+        - First load the module: `import pdb_utils`
+        - For `replace_Bfactors('193l.pdb', myArray, 'CA')`, then `myArray` should be of size (129,1).
+        - For `replace_Bfactors('193l.pdb', myArray, 'All')`, then `myArray` should be of size (1012,1).
 
 - PyMol scripts
     -

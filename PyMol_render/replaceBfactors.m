@@ -23,7 +23,7 @@ function replaceBfactors(myPDB, myArray, selection)
 %   The function above assigns random Bfactors to all '' atoms in the PDB
 %   Iff parameter N is the same length as the number of 'CA' in the 
 %
-% Written by Adams Vallejos for Neutze-lab
+% Written by Adams Vallejos at Neutze-lab
 %
 selection = upper(selection);
 
@@ -59,8 +59,9 @@ end
 
 % GENERATE THE OUTPUT NAMESTRING
 [path, filename, ~] = fileparts(which(myPDB));
-PDB_OUT = sprintf('%s/%s_newBfactors.pdb', path,filename);
+PDB_OUT = sprintf('%s/%s_Bfactors_%.pdb', path,filename,selection);
 
+% WRITE OUT FILE
 pdbwrite(PDB_OUT,PDB_DATA)
 fprintf('\tFile saved as: %s \n', PDB_OUT)
 end
